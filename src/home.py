@@ -1,14 +1,13 @@
-import streamlit as st
-from st_pages import Page, show_pages
-import streamlit.components.v1 as components
 import json
+
 import openai
-from sqlalchemy import create_engine
-from sqlalchemy.sql import text
-from sqlalchemy.exc import ProgrammingError
 import pandas as pd
-
-
+import streamlit as st
+import streamlit.components.v1 as components
+from sqlalchemy import create_engine
+from sqlalchemy.exc import ProgrammingError
+from sqlalchemy.sql import text
+from st_pages import Page, show_pages
 
 # Add a robot emoji icon and set the tab name
 st.set_page_config(page_title="Data Bot", page_icon="🤖")
@@ -33,14 +32,12 @@ with st.expander("How to Use the Chatbot Assistant", expanded=False):
     **Welcome to the Chatbot Assistant!** Here's a quick guide:
 
     1. **Database Connection**: 
-        - Visit the `Database Connection` tab.
-        - Connect with a sample database or use yours.
-        - Fill in the details and hit `connect`.
+        - You can use the sample Chinook DB to ask questions
+        - Connect with a your own database and enter your API key.
+        
 
     2. **Language Model Settings**: 
-        - Go to `Language Model Settings` tab.
-        - Select a model or customize one.
-        - Press `save` when done.
+        - This Model uses OpenAI
 
     3. **Chat with the Bot**: 
         - Switch to the `Chatbot` tab.
@@ -49,9 +46,9 @@ with st.expander("How to Use the Chatbot Assistant", expanded=False):
     4. **Reset Chat**: 
         - Use `Clear Chat History` in the sidebar for a fresh start.
 
-    5. **About & Contact**: 
-        - Know more about this bot in the `About & Contact` tab.
-
-    Dive in and enjoy the experience! 🚀📊
+    **Dive in and enjoy the experience! 🚀📊**
+        Team : Vance
+        (Sayali Sachin Chorge)
+                
     """)
     
